@@ -32,7 +32,7 @@ const buildings = {
 };
 
 const adjudications = [
-  { artform: "Creative Writing", location: "Crabiel Hall", room: "#119", map: "CB", category: "Literary" },
+  { artform: "Creative Writing", location: "Crabiel Hall", room: "#204", map: "CB", category: "Literary" },
   { artform: "Poetry", location: "Crabiel Hall", room: "#121", map: "CB", category: "Literary" },
   { artform: "Filmmaking", location: "Crabiel Hall", room: "#122", map: "CB", category: "Film" },
   { artform: "Small & Large Theater", location: "Crabiel Hall", room: "Amboy Room & #124 for Monologues", map: "CB", category: "Theater" },
