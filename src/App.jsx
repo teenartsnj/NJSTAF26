@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Search, MapPin, Clock, CalendarDays, Star, Utensils, Info, Music, Palette, Theater, Film, PenLine, Mic2, Dumbbell, Building2, Users } from "lucide-react";
+import { Search, MapPin, Clock, CalendarDays, Star, Utensils, Info, Music, Palette, Theater, Film, PenLine, Mic2, Sparkles, Building2, Users } from "lucide-react";
 function Card({ className = "", children }) {
   return <div className={className}>{children}</div>;
 }
@@ -134,7 +134,7 @@ const reminders = [
 ];
 
 const disciplineIcons = {
-  Dance: Dumbbell,
+  Dance: Sparkles,
   "Visual Arts": Palette,
   "Theater & Vocal": Theater,
   Film: Film,
