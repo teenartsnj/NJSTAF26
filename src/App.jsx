@@ -259,7 +259,7 @@ export default function TeenArtsFestivalApp() {
         <div className="sticky top-0 z-10 -mx-4 border-y bg-white/90 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <div className="mx-auto flex max-w-7xl flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-wrap gap-2">
-              {[['schedule','Schedule'], ['adjudications','Adjudications'], ['adjudicators','Adjudicators'], ['map','Map & Logistics']].map(([id,label]) => (
+              {[['schedule','Workshop Schedule'], ['adjudications','Adjudications'], ['adjudicators','Adjudicators'], ['map','Map & Logistics']].map(([id,label]) => (
                 <Button key={id} onClick={() => setTab(id)} variant={tab === id ? "default" : "outline"} className="rounded-full">{label}</Button>
               ))}
             </div>
