@@ -110,7 +110,31 @@ const events = [
   { days: DAYS, title: "Comedy for Social Media", type: "Workshop", discipline: "Theater & Vocal", start: "12:15", end: "13:00", location: "College Center", room: "#173", map: "CC", description: "Comedy and performance skills for short-form social media." },
   { days: DAYS, title: "How to Improve Your Singing Faster", type: "Workshop", discipline: "Theater & Vocal", start: "12:30", end: "13:15", location: "College Center", room: "#319–321", map: "CC", description: "Practice techniques and strategies to improve singing faster." },
   { days: ["June 3"], title: "Creative Changemakers Award", type: "Award", discipline: "Awards", start: "12:00", end: "12:30", location: "College Center", room: "Café A", map: "CC", description: "Awards begin at noon." },
-  { days: ["June 3"], title: "Art Educator of the Year Award", type: "Award", discipline: "Awards", start: "12:15", end: "12:45", location: "College Center", room: "Café A", map: "CC", description: "Recognition for the 2026 Arts Educator of the Year." },
+  { days: ["June 3"], title: "Art Educator of the Year Award", type: "Award", discipline: "Awards", start: "12:15", end: "12:45", location: "College Center", room: "Café A", map: "CC", description: "Recognition for the 2026 Arts Educator of the Year. Jill Alexander consistently brings out the very best in her students. She
+challenges them to think critically, experiment boldly, and refine their
+artistic skills with care and intention. Through her mentorship and
+guidance, students learn not only technical skills but also confidence,
+perseverance, and pride in their work. The results speak for themselves:
+Jill’s students regularly earn recognition in county and state art
+competitions, a testament to both their talent and the exceptional
+instruction they receive.
+Jill’s commitment to students extends even further through her role
+as co-advisor for the National Junior Art Honor Society at Wall High
+School. In this role, she fosters a culture of artistic excellence, leadership,
+and service. She encourages students to use their talents not only to
+create meaningful work but also to contribute positively to their school
+and community.
+Perhaps most importantly, Jill inspires. Students gravitate to her
+classes because they know they will be challenged, supported, and
+encouraged to discover what they are capable of achieving. She
+celebrates their individuality, coaches them through challenges, and
+takes great pride in their successes. Many of her students continue
+their artistic pursuits beyond high school, carrying with them the
+confidence and passion she helped cultivate.
+Jill Alexander’s dedication, creativity, leadership, and unwavering
+commitment to her students make her an extraordinary art educator.
+She represents the very spirit of arts education in New Jersey, and I
+cannot think of a more deserving candidate for this honor." },
   { days: DAYS, title: "African Drum Circle", type: "Activity", discipline: "Music", start: "All day", end: "", location: "College Center", room: "Lawn", map: "CC", description: "Hands-on drum circle inspired by rhythms of Ghana using traditional instruments." },
   { days: DAYS, title: "ArtStop Coloring Station", type: "Activity", discipline: "Visual Arts", start: "All day", end: "", location: "College Center", room: "Lobby", map: "CC", description: "Relax, recharge, and create at the coloring station." },
   { days: DAYS, title: "Backpack Charms", type: "Activity", discipline: "Visual Arts", start: "All day", end: "", location: "Physical Education Building", room: "Lobby", map: "PE", description: "Make a unique backpack charm." },
