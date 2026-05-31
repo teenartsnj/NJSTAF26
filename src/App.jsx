@@ -1,7 +1,25 @@
 import React, { useMemo, useState } from "react";
 import { Search, MapPin, Clock, CalendarDays, Star, Utensils, Info, Music, Palette, Theater, Film, PenLine, Mic2, Dumbbell, Building2, Users } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+function Card({ className = "", children }) {
+  return <div className={className}>{children}</div>;
+}
+
+function CardContent({ className = "", children }) {
+  return <div className={className}>{children}</div>;
+}
+
+function Button({ className = "", variant = "outline", children, ...props }) {
+  const base = "px-4 py-2 text-sm font-semibold transition";
+  const style =
+    variant === "default"
+      ? "bg-gradient-to-r from-sky-700 via-purple-700 to-orange-500 text-white border border-orange-300"
+      : "border border-sky-200 bg-white text-slate-900";
+  return (
+    <button className={`${base} ${style} ${className}`} {...props}>
+      {children}
+    </button>
+  );
+}
 
 const DAYS = ["June 1", "June 2", "June 3"];
 
