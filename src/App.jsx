@@ -1,27 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Search, MapPin, Clock, CalendarDays, Star, Utensils, Info, Music, Palette, Theater, Film, PenLine, Mic2, Dumbbell, Building2, Users } from "lucide-react";
-
-
-function Card({ className = "", children }) {
-  return <div className={className}>{children}</div>;
-}
-
-function CardContent({ className = "", children }) {
-  return <div className={className}>{children}</div>;
-}
-
-function Button({ className = "", variant = "outline", children, ...props }) {
-  const base = "px-4 py-2 text-sm font-semibold transition";
-  const style =
-    variant === "default"
-      ? "bg-slate-950 text-white border border-slate-950"
-      : "border border-slate-300 bg-white text-slate-900";
-  return (
-    <button className={`${base} ${style} ${className}`} {...props}>
-      {children}
-    </button>
-  );
-}
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const DAYS = ["June 1", "June 2", "June 3"];
 
@@ -110,7 +90,7 @@ const events = [
   { days: DAYS, title: "Comedy for Social Media", type: "Workshop", discipline: "Theater & Vocal", start: "12:15", end: "13:00", location: "College Center", room: "#173", map: "CC", description: "Comedy and performance skills for short-form social media." },
   { days: DAYS, title: "How to Improve Your Singing Faster", type: "Workshop", discipline: "Theater & Vocal", start: "12:30", end: "13:15", location: "College Center", room: "#319–321", map: "CC", description: "Practice techniques and strategies to improve singing faster." },
   { days: ["June 3"], title: "Creative Changemakers Award", type: "Award", discipline: "Awards", start: "12:00", end: "12:30", location: "College Center", room: "Café A", map: "CC", description: "Awards begin at noon." },
-  { days: ["June 3"], title: "Art Educator of the Year Award", type: "Award", discipline: "Awards", start: "12:15", end: "12:45", location: "College Center", room: "Café A", map: "CC", description: "Honoring Jill Alexander of Wall High School, whose dedication to arts education has inspired countless students to achieve artistic excellence. Jill consistently challenges students to think critically, experiment boldly, and refine their skills with care and intention. Her students regularly earn recognition in county and state art competitions, reflecting both their talent and her exceptional instruction. As co-advisor of the National Junior Art Honor Society at Wall High School, she fosters leadership, artistic excellence, and community service. Jill creates an environment where students feel challenged, supported, and encouraged to discover their potential. Many continue their artistic pursuits beyond high school, carrying with them the confidence and passion she helped cultivate. Her creativity, leadership, and unwavering commitment to students embody the very spirit of arts education in New Jersey." },
+  { days: ["June 3"], title: "Art Educator of the Year Award", type: "Award", discipline: "Awards", start: "12:15", end: "12:45", location: "College Center", room: "Café A", map: "CC", description: "Recognition for the 2026 Arts Educator of the Year." },
   { days: DAYS, title: "African Drum Circle", type: "Activity", discipline: "Music", start: "All day", end: "", location: "College Center", room: "Lawn", map: "CC", description: "Hands-on drum circle inspired by rhythms of Ghana using traditional instruments." },
   { days: DAYS, title: "ArtStop Coloring Station", type: "Activity", discipline: "Visual Arts", start: "All day", end: "", location: "College Center", room: "Lobby", map: "CC", description: "Relax, recharge, and create at the coloring station." },
   { days: DAYS, title: "Backpack Charms", type: "Activity", discipline: "Visual Arts", start: "All day", end: "", location: "Physical Education Building", room: "Lobby", map: "PE", description: "Make a unique backpack charm." },
@@ -168,21 +148,21 @@ function prettyTime(e) {
 }
 
 function Badge({ children }) {
-  return <span className="rounded-full bg-white/75 px-3 py-1 text-xs font-semibold text-slate-700 shadow-sm ring-1 ring-slate-200">{children}</span>;
+  return <span className="rounded-full bg-gradient-to-r from-orange-100 via-sky-100 to-purple-100 px-3 py-1 text-xs font-black text-slate-800 shadow-sm ring-1 ring-sky-200">{children}</span>;
 }
 
 function EventCard({ event }) {
   const Icon = disciplineIcons[event.discipline] || CalendarDays;
   return (
-    <Card className="overflow-hidden rounded-2xl border-slate-200 bg-white/90 shadow-sm transition hover:shadow-md">
+    <Card className="overflow-hidden rounded-2xl border-2 border-sky-100 bg-white/95 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-lg">
       <CardContent className="p-4">
         <div className="flex items-start gap-3">
-          <div className="rounded-2xl bg-slate-100 p-2"><Icon className="h-5 w-5" /></div>
+          <div className="rounded-2xl bg-gradient-to-br from-orange-400 via-pink-500 to-sky-500 p-2 text-white shadow-md"><Icon className="h-5 w-5" /></div>
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap gap-2">
               <Badge>{event.type}</Badge><Badge>{event.discipline}</Badge>{event.map && <Badge>{event.map}</Badge>}
             </div>
-            <h3 className="mt-3 text-lg font-bold leading-tight text-slate-950">{event.title}</h3>
+            <h3 className="mt-3 text-lg font-black leading-tight text-slate-950">{event.title}</h3>
             <div className="mt-2 flex flex-col gap-1 text-sm text-slate-700 sm:flex-row sm:flex-wrap sm:gap-4">
               <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{prettyTime(event)}</span>
               <span className="flex items-center gap-1"><MapPin className="h-4 w-4" />{event.location}{event.room ? `, ${event.room}` : ""}</span>
@@ -221,17 +201,17 @@ export default function TeenArtsFestivalApp() {
   const nowNext = filteredEvents.filter(e => e.start !== "All day" && e.start !== "Drop-in").slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-amber-50 text-slate-900">
-      <header className="relative overflow-hidden border-b bg-slate-950 text-white">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 15% 20%, #f97316 0 8%, transparent 9%), radial-gradient(circle at 70% 0%, #22c55e 0 10%, transparent 11%), radial-gradient(circle at 90% 60%, #38bdf8 0 12%, transparent 13%)" }} />
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,#fed7aa,transparent_32%),radial-gradient(circle_at_top_right,#bae6fd,transparent_30%),radial-gradient(circle_at_bottom_left,#ddd6fe,transparent_35%),linear-gradient(135deg,#fff7ed,#f0f9ff,#faf5ff)] text-slate-900">
+      <header className="relative overflow-hidden border-b bg-gradient-to-br from-sky-700 via-purple-700 to-orange-500 text-white">
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 15% 20%, #facc15 0 8%, transparent 9%), radial-gradient(circle at 70% 0%, #22c55e 0 10%, transparent 11%), radial-gradient(circle at 90% 60%, #38bdf8 0 12%, transparent 13%), radial-gradient(circle at 45% 80%, #ec4899 0 9%, transparent 10%)" }} />
         <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">New Jersey State Teen Arts Festival 2026</p>
-              <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">Art Unites Us All</h1>
+              <p className="text-sm font-black uppercase tracking-[0.3em] text-yellow-200 drop-shadow">New Jersey State Teen Arts Festival 2026</p>
+              <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl"><span className="bg-gradient-to-r from-white via-yellow-100 to-sky-100 bg-clip-text text-transparent">Art Unites Us All</span></h1>
               <p className="mt-4 max-w-3xl text-lg text-slate-200">June 1, 2 & 3 at Middlesex College, 2600 Woodbridge Ave, Edison, NJ. A searchable event app for sessions, workshops, adjudications, warmups, activities, awards, food, and campus navigation.</p>
             </div>
-            <div className="grid gap-2 rounded-2xl bg-white/10 p-4 text-sm backdrop-blur">
+            <div className="grid gap-2 rounded-2xl border border-white/30 bg-white/15 p-4 text-sm shadow-xl backdrop-blur">
               <div className="flex items-center gap-2"><Building2 className="h-4 w-4" />Check-in: Crabiel Hall</div>
               <div className="flex items-center gap-2"><Utensils className="h-4 w-4" />Food trucks: Lot #3</div>
               <div className="flex items-center gap-2"><MapPin className="h-4 w-4" />Bus parking: Lot #2</div>
@@ -246,7 +226,7 @@ export default function TeenArtsFestivalApp() {
             const dayCount = events.filter(e => e.days?.includes(day)).length;
             return (
               <button key={day} onClick={() => setSelectedDay(day)} className="text-left">
-                <Card className={`rounded-2xl transition ${selectedDay === day ? "border-slate-950 bg-slate-950 text-white shadow-lg" : "hover:shadow-md"}`}>
+                <Card className={`rounded-2xl border-2 transition ${selectedDay === day ? "border-orange-400 bg-gradient-to-br from-sky-700 via-purple-700 to-orange-500 text-white shadow-xl" : "border-sky-100 bg-white/90 hover:border-pink-300 hover:shadow-lg"}`}>
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 font-bold"><CalendarDays className="h-5 w-5" />{day}</div>
                     <p className={`mt-1 text-sm ${selectedDay === day ? "text-slate-200" : "text-slate-600"}`}>{day === "June 3" ? "Festival programming plus awards" : "Festival programming on campus"}</p>
