@@ -225,7 +225,7 @@ export default function TeenArtsFestivalApp() {
         <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.3em] text-yellow-200 drop-shadow">New Jersey State Teen Arts Festival 2026</p>
+              <p className="text-sm font-black uppercase tracking-[0.3em] text-yellow-200 drop-shadow">New Jersey State Teen Arts Festival® 2026</p>
               <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl"><span className="bg-gradient-to-r from-white via-yellow-100 to-sky-100 bg-clip-text text-transparent">Art Unites Us All</span></h1>
               <p className="mt-4 max-w-3xl text-lg text-slate-200">June 1, 2 & 3 at Middlesex College, 2600 Woodbridge Ave, Edison, NJ. A searchable event app for sessions, workshops, adjudications, warmups, activities, awards, food, and campus navigation.</p>
             </div>
