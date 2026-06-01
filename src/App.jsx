@@ -126,6 +126,7 @@ const events = [
 
 const reminders = [
   "Check in inside Crabiel Hall on arrival. Teachers, individually registered students, artists, volunteers, and guests must check in.",
+  "Instrument storage will be in College Center Rooms 174 and 175.",
   "Buses park in Lot #2. Food trucks are in Lot #3.",
   "Performing students should arrive at the performance venue 10 minutes before the scheduled time.",
   "Food and beverages are not permitted in workshop or performance venues.",
