@@ -77,7 +77,6 @@ const adjudicators = [
 
 const events = [
   { days: DAYS, title: "Jazz Funk", type: "Workshop", discipline: "Dance", start: "09:30", end: "10:15", location: "College Center", room: "Café C", map: "CC", description: "High-energy street jazz choreography focused on musicality, confidence, style, and performance quality." },
-  { days: DAYS, title: "Comedy for Social Media", type: "Workshop", discipline: "Theater & Vocal", start: "09:30", end: "10:15", location: "College Center", room: "#173", map: "CC", description: "Comedy and performance skills for short-form social media." },
   { days: DAYS, title: "Smartphone Storytellers: Unleash Your MOJO", type: "Workshop", discipline: "Film", start: "09:30", end: "10:15", location: "Crabiel Hall", room: "#122", map: "CB", description: "Mobile storytelling with framing, lighting, sound, Filmic Pro, and mobile-journalism gear." },
   { days: DAYS, title: "Empty Bowls: Every Bowl Feeds a Soul", type: "Workshop", discipline: "Visual Arts", start: "09:45", end: "10:30", location: "Edison Hall", room: "#168", map: "ED", description: "Hand-build pottery bowls for a social-awareness project supporting nonprofit fundraising for local families." },
   { days: DAYS, title: "Acting the Song: The Deconstruction", type: "Workshop", discipline: "Theater & Vocal", start: "10:00", end: "10:45", location: "Crabiel Hall", room: "Raritan Room", map: "CB", description: "Read lyrics as spoken monologue to find emotional triggers and story-first musical theater interpretation." },
